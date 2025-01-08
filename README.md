@@ -17,7 +17,7 @@ In order to debug the guidance method of LLM, we first simplified the environmen
 ![success_rate_test](image/success_rate_test.png)
 ![collision_rate_test](image/collision_rate_test.png)
 
-In the above figures, LLM_1 represents the use of LLM guidance and additional experience replay, LLM_2 represents LLM guidance, and LLM_3 represents LLM guidance and additional TTC penalty. 
+In the above figures, LLM_1 represents the use of LLM guidance and additional experience replay, LLM_2 represents LLM guidance, and LLM_3 represents LLM guidance and additional TTC penalty. The weight files and training logs of the model can be obtained from Baidu Netdisk: https://pan.baidu.com/s/1BZTsWlViOZVN2Yf3oHbs_Q?pwd=1234. According to the chronological order, they are IQN LLM_1、LLM_2、LLM_3.
 
 However, we found that using the random seed setting in the benchmark algorithm code library, the training of the model (i.e. the training curve in the figure above) cannot be reproduced. Therefore, we changed the setting of the random seed in the IQN_model.py and trainer.py files to:
 
