@@ -10,10 +10,9 @@ Based on the original code repository, we made modifications to the trainer.py f
 
 (3) During sampling, incorporating extra JS loss terms based on the experience guided by the LLM, with weight coefficients that decay over time.
 
-<<<<<<< HEAD
-In order to debug the guidance method of LLM, we first simplified the environment of the benchmark algorithm and removed the influence of vortices and water flow in the scene. To ensure fairness in the comparison, all other settings of the algorithm remain unchanged. The current experimental results are saved in the training.py file, and the evaluation visualization results during the training process are as follows:
-=======
 In order to debug the guidance method of LLM, we first simplified the environment of the benchmark algorithm and removed the influence of vortices and water flow in the scene. To ensure fairness in the comparison, all other settings of the algorithm remain unchanged. The current experimental results are saved in the training.py file, and the evaluation visualization results during the training process are as follows:
 
-
->>>>>>> ad435694628b0d98d9d9a7e0c415c505f4ae5e47
+![success_rate_evaluate](success_rate_evaluate)
+![average_reward_evaluate](images/average_reward_evaluate)
+![success_rate_test](success_rate_test)
+![collision_rate_test](collision_rate_test)
