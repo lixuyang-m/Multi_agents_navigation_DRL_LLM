@@ -12,7 +12,7 @@ Based on the original code repository, we made modifications to the trainer.py f
 
 In order to debug the guidance method of LLM, we first simplified the environment of the benchmark algorithm and removed the influence of vortices and water flow in the scene. To ensure fairness in the comparison, all other settings of the algorithm remain unchanged. The current experimental results are saved in the training.py file, and the evaluation visualization results during the training process are as follows:
 
-![success_rate_evaluate](image/success_rate_evaluate)
-![average_reward_evaluate](image/average_reward_evaluate)
-![success_rate_test](image/success_rate_test)
-![collision_rate_test](image/collision_rate_test)
+![success_rate_evaluate](image/success_rate_evaluate.png)
+![average_reward_evaluate](image/average_reward_evaluate.png)
+![success_rate_test](image/success_rate_test.png)
+![collision_rate_test](image/collision_rate_test.png)
