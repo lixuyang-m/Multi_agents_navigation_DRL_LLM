@@ -16,3 +16,20 @@ In order to debug the guidance method of LLM, we first simplified the environmen
 ![average_reward_evaluate](image/average_reward_evaluate.png)
 ![success_rate_test](image/success_rate_test.png)
 ![collision_rate_test](image/collision_rate_test.png)
+
+In the above figures, LLM_1 represents the use of LLM guidance and additional experience replay, LLM_2 represents LLM guidance, and LLM_3 represents LLM guidance and additional TTC penalty. 
+
+However, we found that using the random seed setting in the benchmark algorithm code library, the training of the model (i.e. the training curve in the figure above) cannot be reproduced. Therefore, we changed the setting of the random seed in the IQN_model.py and trainer.py files to:
+
+def set_seed(self, seed):
+    """
+    Set random seeds for reproducibility.
+    """
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed(seed)
+        torch.cuda.manual_seed_all(seed)
+        torch.backends.cudnn.deterministic = True
+        torch.backends.cudnn.benchmark = False
